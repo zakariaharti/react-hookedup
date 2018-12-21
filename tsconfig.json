@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "sourceMap": true,
+    "allowJs": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDirs": [".","src", "stories"],
+    "baseUrl": "src",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": false,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "declaration": false,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "index.d.ts",
+      "node_modules/@types"
+    ]
+  },
+  "include": ["src/**/*","./**/*"],
+  "exclude": ["node_modules", "build", "scripts"]
+}
