@@ -3,13 +3,14 @@ const TSLintPlugin = require('tslint-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  mode: 'production',
   entry: {
     app: './src/index.ts'
   },
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname,'build'),
-    library: 'react-awesome-notifications',
+    library: 'react-hookedup',
     libraryTarget: 'umd'
   },
   resolve: {
