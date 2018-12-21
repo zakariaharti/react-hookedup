@@ -1,0 +1,24 @@
+{
+  "extends": ["tslint:recommended"],
+  "linterOptions": {
+    "exclude": []
+  },
+  "rules": {
+    "trailing-comma": false,
+    "triple-equals": false,
+    "semicolon": false,
+    "quotemark": false,
+    "whitespace": false,
+    "no-consecutive-blank-lines": false,
+    "curly": false,
+    "arrow-parens": false,
+    "no-unused-expression": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-string-literal": false,
+    "interface-over-type-literal": false,
+    "no-console": false,
+    "jsx-self-close": false,
+    "jsx-no-lambda": false
+  }
+}
