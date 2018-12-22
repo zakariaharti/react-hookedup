@@ -3,10 +3,10 @@ import { useState, useCallback } from 'react';
 /**
  * useBoolean hook
  *
- * @param {mixed} initale
+ * @param {mixed} initial
  */
-const useBoolean = (initale: any) => {
-  const [value, setValue] = useState(initale);
+const useBoolean = (initial: any) => {
+  const [value, setValue] = useState(initial);
   return{
     value,
     setValue,
