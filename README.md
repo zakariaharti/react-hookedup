@@ -29,35 +29,35 @@ Visit [here](https://zakariaharti.github.io/react-hookedup)
 
 | Name                                    | Description            | Arguments        | Returns     |
 | ---------------------------------------- | --------------------- | ----------------- | ----------- |
-| [useArray](/#useArray) | useful hook for manipulating arrays  | initial value | {value, setValue, removeById, removeIndex, clear} |
-| [useBoolean](/#useBoolean) | useful hook for manipulating booleans  | initial value | {value, setValue, toggle, setTrue, setFalse} |
-| [useCounter](/#useCounter) | counter hook  | value,{upperLimit,lowerLimit,step,loop} | {value, setValue, increase,decrease} |
-| [useFocus](/#useFocus) | focus hook | null | {focused, bind} |
-| [useHover](/#useHover) | hover hook | null | {hovered, bind} |
-| [useInput](/#useInput) | input handling hook | initial value | {value, setValue, onChange, bindToInput, bind, hasValue, clear} |
+| [useArray](#useArray) | useful hook for manipulating arrays  | initial value | {value, setValue, removeById, removeIndex, clear} |
+| [useBoolean](#useBoolean) | useful hook for manipulating booleans  | initial value | {value, setValue, toggle, setTrue, setFalse} |
+| [useCounter](#useCounter) | counter hook  | value,{upperLimit,lowerLimit,step,loop} | {value, setValue, increase,decrease} |
+| [useFocus](#useFocus) | focus hook | null | {focused, bind} |
+| [useHover](#useHover) | hover hook | null | {hovered, bind} |
+| [useInput](#useInput) | input handling hook | initial value | {value, setValue, onChange, bindToInput, bind, hasValue, clear} |
 
 ### `lifecycles hooks`
 
 | Name                                    | Description            | Arguments        | Returns     |
 | ---------------------------------------- | --------------------- | ----------------- | ----------- |
-| [useLifecycleHooks](/#useLifecycleHooks) | use lifecycle methods  | {onMount, onUnmount} | void |
-| [useOnMount](/#useOnMount) | componentDidMount like lifecycle  | Function | void |
-| [useOnUnmount](/#useOnUnmount) | componentWillUnMount like lifecycle  | Function | void |
-| [useMergeState](/#useMergeState) | merge the previous state with new one | initial value of the state | {setState: Function, state} |
-| [usePrevious](/#usePrevious) | get the previous value of the state | initial value of the state | the previous value |
+| [useLifecycleHooks](#useLifecycleHooks) | use lifecycle methods  | {onMount, onUnmount} | void |
+| [useOnMount](#useOnMount) | componentDidMount like lifecycle  | Function | void |
+| [useOnUnmount](#useOnUnmount) | componentWillUnMount like lifecycle  | Function | void |
+| [useMergeState](#useMergeState) | merge the previous state with new one | initial value of the state | {setState: Function, state} |
+| [usePrevious](#usePrevious) | get the previous value of the state | initial value of the state | the previous value |
 
 ### `timers hooks`
 
 | Name                                    | Description            | Arguments        | Returns     |
 | ---------------------------------------- | --------------------- | ----------------- | ----------- |
-| [useInterval](/#useInterval) | use setInterval in hooks  | {function, delay} | void |
-| [useTimeout](/#useTimeout) | use setTimeout | {function, delay} | void |
+| [useInterval](#useInterval) | use setInterval in hooks  | {function, delay} | void |
+| [useTimeout](#useTimeout) | use setTimeout | {function, delay} | void |
 
 ### `network hooks`
 
 | Name                                    | Description            | Arguments        | Returns     |
 | ---------------------------------------- | --------------------- | ----------------- | ----------- |
-| [useOnlineStatus](/#useOnlineStatus) | check the browser if connected to the internet  | null| {onLine} |
+| [useOnLineStatus](#useOnLineStatus) | check the browser if connected to the internet  | null| {onLine} |
 
 # Usage
 
@@ -316,6 +316,20 @@ const useTimeoutExapme = () => {
   return (
     <h1>
       I will alert in 1.5 s
+    </h1>
+  );
+};
+```
+
+### `useOnLineStatus`
+
+```jsx
+const useTimeoutExapme = () => {
+  const {online} = useOnLineStatus();
+
+  return (
+    <h1>
+      you are : {online ? 'online' : 'offline'}
     </h1>
   );
 };
