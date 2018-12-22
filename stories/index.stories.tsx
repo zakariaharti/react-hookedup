@@ -4,7 +4,8 @@ import { storiesOf } from '@storybook/react';
 import {
   useFocus,
   useArray,
-  useInput
+  useInput,
+  useBoolean
 } from '../src/';
 
 const Welcome = () => (
@@ -113,9 +114,21 @@ const ExampleUseArray = () => {
       </div>
     </div>
   )
-}
+};
+
+const ExampleUseBoolean = () => {
+  const {toggle, value} = useBoolean(false);
+
+  return(
+    <div>
+      <p>{JSON.stringify(value)}</p>
+      <button onClick={() => toggle()}>toggle</button>
+    </div>
+  );
+};
 
 const stories = storiesOf('hooks', module);
 
 stories.add('useFocus',() => <ExampleUseFocus /> );
 stories.add('useArray',() => <ExampleUseArray /> );
+stories.add('useBoolean',() => <ExampleUseBoolean /> );
