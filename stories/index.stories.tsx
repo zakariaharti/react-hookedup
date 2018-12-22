@@ -5,7 +5,9 @@ import {
   useFocus,
   useArray,
   useInput,
-  useBoolean
+  useBoolean,
+  useCounter,
+  useHover
 } from '../src/';
 
 const Welcome = () => (
@@ -127,8 +129,43 @@ const ExampleUseBoolean = () => {
   );
 };
 
+const ExampleUseCounter = () => {
+  const {decrease,increase,value} = useCounter(1);
+  const { bindToInput, value: value2 } = useInput('');
+  const { bindToInput: bindToInput2, value: value3 } = useInput('');
+
+  return(
+    <div>
+      <p>{JSON.stringify(value)}</p>
+      <div>
+        increase by :
+        <input {...bindToInput}  />
+        <button onClick={() => increase(value2)}>increase</button>
+      </div>
+      <div>
+        dicrease by :
+        <input {...bindToInput2}  />
+        <button onClick={() => decrease(value3)}>decrease</button>
+      </div>
+    </div>
+  );
+};
+
+const ExampleUseHover = () => {
+  const {hovered, bind} = useHover();
+
+  return(
+    <div>
+      <p>this is input is : {hovered ? 'hovered' : 'not hovered'}</p>
+      <input {...bind}  />
+    </div>
+  );
+};
+
 const stories = storiesOf('hooks', module);
 
 stories.add('useFocus',() => <ExampleUseFocus /> );
 stories.add('useArray',() => <ExampleUseArray /> );
 stories.add('useBoolean',() => <ExampleUseBoolean /> );
+stories.add('useCounter',() => <ExampleUseCounter /> );
+stories.add('useHover',() => <ExampleUseHover /> );
