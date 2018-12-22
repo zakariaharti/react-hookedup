@@ -1,11 +1,23 @@
 {
   "name": "react-hookedup",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "main": "build/index.js",
   "repository": "https://github.com/zakariaharti/react-hookedup.git",
-  "author": "zakariaharti <zakariya.developer@gmail.com>",
+  "author": "zakaria harti <zakariya.harti@gmail.com> (https://github.com/zakariaharti)",
   "license": "MIT",
+  "description": "A collection of useful React hooks",
   "private": false,
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "useful-hooks",
+    "reusible-hooks"
+  ],
+  "bugs": {
+    "url": "https://github.com/zakariaharti/react-hookedup/issues"
+  },
+  "homepage": "https://github.com/zakariaharti/react-hookedup#readme",
   "dependencies": {
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2"
@@ -29,6 +41,7 @@
     "webpack-cli": "^3.1.2"
   },
   "scripts": {
+    "build": "webpack",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }

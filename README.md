@@ -2,6 +2,10 @@
   <img src="/screenshot.PNG" />
 </div>
 
+[![npm](https://img.shields.io/npm/v/react-hookedup.svg?style=for-the-badge)](https://www.npmjs.com/package/react-hookedup)
+ [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://github.com/zakariaharti/react-hookedup/blob/master/LICENSE.md)
+[![Storybook](https://img.shields.io/badge/docs-storybook-pink.svg?style=for-the-badge)](https://zakariaharti.github.io/react-hookedup/)
+
 >Hooks are a new feature proposal that lets you use state and other React features without writing a class. They’re currently in React v16.7.0-alpha and being discussed in an open RFC.
 
 ## Installation
