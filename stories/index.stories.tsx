@@ -162,6 +162,22 @@ const ExampleUseHover = () => {
   );
 };
 
+const ExampleUseInput = () => {
+  const {
+    bindToInput,
+    clear,
+    value
+  } = useInput('');
+
+  return(
+    <div>
+      <p>you entered : {value}</p>
+      <input {...bindToInput}  />
+      <button onClick={() => clear()}>clear</button>
+    </div>
+  );
+};
+
 const stories = storiesOf('hooks', module);
 
 stories.add('useFocus',() => <ExampleUseFocus /> );
@@ -169,3 +185,4 @@ stories.add('useArray',() => <ExampleUseArray /> );
 stories.add('useBoolean',() => <ExampleUseBoolean /> );
 stories.add('useCounter',() => <ExampleUseCounter /> );
 stories.add('useHover',() => <ExampleUseHover /> );
+stories.add('useInput',() => <ExampleUseInput /> );
