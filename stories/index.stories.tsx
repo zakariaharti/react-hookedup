@@ -7,7 +7,8 @@ import {
   useInput,
   useBoolean,
   useCounter,
-  useHover
+  useHover,
+  useInterval
 } from '../src/';
 
 const Welcome = () => (
@@ -178,6 +179,18 @@ const ExampleUseInput = () => {
   );
 };
 
+const ExampleUseInterval = () => {
+  useInterval(() => {
+    alert('hello world!');
+  }, 1500);
+
+  return(
+    <div>
+      alert will be showed after 1500s
+    </div>
+  );
+};
+
 const stories = storiesOf('hooks', module);
 
 stories.add('useFocus',() => <ExampleUseFocus /> );
@@ -186,3 +199,4 @@ stories.add('useBoolean',() => <ExampleUseBoolean /> );
 stories.add('useCounter',() => <ExampleUseCounter /> );
 stories.add('useHover',() => <ExampleUseHover /> );
 stories.add('useInput',() => <ExampleUseInput /> );
+stories.add('useInterval',() => <ExampleUseInterval /> );
