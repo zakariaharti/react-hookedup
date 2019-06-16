@@ -42,7 +42,7 @@ Visit [here](https://zakariaharti.github.io/react-hookedup)
 | ---------------------------------------- | --------------------- | ----------------- | ----------- |
 | [useLifecycleHooks](#useLifecycleHooks) | use lifecycle methods  | {onMount, onUnmount} | void |
 | [useOnMount](#useOnMount) | componentDidMount like lifecycle  | Function | void |
-| [useOnUnmount](#useOnUnmount) | componentWillUnMount like lifecycle  | Function | void |
+| [useOnUnmount](#useOnUnmount) | componentWillUnmount like lifecycle  | Function | void |
 | [useMergeState](#useMergeState) | merge the previous state with new one | initial value of the state | {setState: Function, state} |
 | [usePrevious](#usePrevious) | get the previous value of the state | initial value of the state | the previous value |
 
@@ -50,14 +50,14 @@ Visit [here](https://zakariaharti.github.io/react-hookedup)
 
 | Name                                    | Description            | Arguments        | Returns     |
 | ---------------------------------------- | --------------------- | ----------------- | ----------- |
-| [useInterval](#useInterval) | use setInterval in hooks  | {function, delay} | void |
-| [useTimeout](#useTimeout) | use setTimeout | {function, delay} | void |
+| [useInterval](#useInterval) | use setInterval via hooks  | {function, delay} | void |
+| [useTimeout](#useTimeout) | use setTimeout via hooks | {function, delay} | void |
 
 ### `network hooks`
 
 | Name                                    | Description            | Arguments        | Returns     |
 | ---------------------------------------- | --------------------- | ----------------- | ----------- |
-| [useOnLineStatus](#useOnLineStatus) | check the browser if connected to the internet  | null| {onLine} |
+| [useOnLineStatus](#useOnLineStatus) | check if the browser is connected to the internet  | null| {onLine} |
 
 # Usage
 
@@ -158,7 +158,7 @@ const App = () => {
 const App = () => {
   useLifecycleHooks({
     onMount: () => console.log("mounted!"),
-    onUnmount: () => console.log("unmounted!")
+    onUnmount: () => console.log("unmounting!")
   });
 
   return <div> hello world </div>;
@@ -296,7 +296,7 @@ const Counter = () => {
 ### `useInterval`
 
 ```jsx
-const useIntervalExapme = () => {
+const useIntervalExample = () => {
   useInterval(() => alert('hello world'), 1500);
 
   return (
@@ -310,7 +310,7 @@ const useIntervalExapme = () => {
 ### `useTimeout`
 
 ```jsx
-const useTimeoutExapme = () => {
+const useTimeoutExample = () => {
   useTimeout(() => alert('hello world'), 1500);
 
   return (
@@ -324,7 +324,7 @@ const useTimeoutExapme = () => {
 ### `useOnLineStatus`
 
 ```jsx
-const useTimeoutExapme = () => {
+const useOnLineStatusExample = () => {
   const {online} = useOnLineStatus();
 
   return (
