@@ -57,7 +57,7 @@ Visit [here](https://zakariaharti.github.io/react-hookedup)
 
 | Name                                    | Description            | Arguments        | Returns     |
 | ---------------------------------------- | --------------------- | ----------------- | ----------- |
-| [useOnLineStatus](#useOnLineStatus) | check if the browser is connected to the internet  | null| {onLine} |
+| [useOnLineStatus](#useOnLineStatus) | check if the browser is connected to the internet  | null| {online} |
 
 # Usage
 
