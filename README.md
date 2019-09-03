@@ -4,20 +4,20 @@
  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://github.com/zakariaharti/react-hookedup/blob/master/LICENSE.md)
 [![Storybook](https://img.shields.io/badge/docs-storybook-pink.svg?style=for-the-badge)](https://zakariaharti.github.io/react-hookedup/)
 
->Hooks are a new feature proposal that lets you use state and other React features without writing a class. They’re currently in React v16.7.0-alpha and being discussed in an open RFC.
+>Hooks require at least React 16.8
 
 ## Installation
 
 **using npm**
 
 ```
-npm install react-hookedup react@next react-dom@next --save
+npm install react-hookedup --save
 ```
 
 **using yarn**
 
 ```
-yarn add react-hookedup react@next react-dom@next
+yarn add react-hookedup
 ```
 
 # Demo
