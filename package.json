@@ -1,9 +1,9 @@
 {
-  "name": "react-hookedup-fork",
-  "version": "0.1.2",
-  "main": "build/react-hookedup-fork.js",
-  "umd:main": "build/react-hookedup-fork.umd.js",
-  "module": "build/react-hookedup-fork.m.js",
+  "name": "react-hookedup",
+  "version": "0.1.1",
+  "main": "build/react-hookedup.js",
+  "umd:main": "build/react-hookedup.umd.js",
+  "module": "build/react-hookedup.m.js",
   "source": "src/index.ts",
   "repository": "https://github.com/zakariaharti/react-hookedup.git",
   "author": "zakaria harti <zakariya.harti@gmail.com> (https://github.com/zakariaharti)",
@@ -46,7 +46,7 @@
     "webpack-cli": "^3.1.2"
   },
   "scripts": {
-    "build": "rimraf build && microbundle -o build/ --name react-hookedup-fork --sourcemap false",
+    "build": "rimraf build && microbundle -o build/ --name react-hookedup --sourcemap false",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -c .storybook -o docs"
   }
