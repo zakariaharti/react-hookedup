@@ -7,20 +7,21 @@ import { useState, useCallback } from 'react';
  */
 const useCounter = (
   initial: any,
-  options: {
+  optionsArg: {
     upperLimit?: number,
     lowerLimit?: number,
     loop?: boolean,
     step?: number
-  } = {step: 1}
+  }
 ) => {
+  const options = { step: 1, ...optionsArg }
   const [value, setValue] = useState(initial);
   return {
     value,
     setValue,
     increase: useCallback(i => {
       setValue((value: any) => {
-        const increaseBy = i !== undefined ? i : options.step;
+        const increaseBy = typeof i === 'number' ? i : options.step;
         const nextValue = value + increaseBy;
 
         return options.upperLimit !== undefined
@@ -34,7 +35,7 @@ const useCounter = (
     }, []),
     decrease: useCallback(d => {
       setValue((value: any) => {
-        const decreaseBy = d !== undefined ? d : options.step;
+        const decreaseBy = typeof d === 'number' ? d : options.step;
         const nextValue = value - decreaseBy;
 
         return options.lowerLimit !== undefined
