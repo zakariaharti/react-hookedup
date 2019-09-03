@@ -18,10 +18,7 @@ const useArray = (initial: any) => {
     ),
     removeIndex: useCallback(
       index =>
-        setValue((v: any) => {
-          v.splice(index, 1);
-          return v;
-        }),
+        setValue((arr: any) => arr.filter((v: any, i: any) => i !== index)),
       []
     )
   };
