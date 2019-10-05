@@ -1,6 +1,6 @@
 {
   "name": "react-hookedup",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "build/react-hookedup.js",
   "umd:main": "build/react-hookedup.umd.js",
   "module": "build/react-hookedup.m.js",
