@@ -8,7 +8,7 @@ import { useEffect } from 'react';
  const useLifecycleHooks = (eLifecycleHooks: {
    onMount: () => void,
    onUnmount: () => void
- }) => () =>
+ }) =>
   useEffect(() => {
     eLifecycleHooks.onMount && eLifecycleHooks.onMount();
     return () => eLifecycleHooks.onUnmount && eLifecycleHooks.onUnmount();
