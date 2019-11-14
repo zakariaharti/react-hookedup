@@ -4,6 +4,7 @@
   "main": "build/react-hookedup.js",
   "umd:main": "build/react-hookedup.umd.js",
   "module": "build/react-hookedup.m.js",
+  "types": "build/src/index.d.ts",
   "source": "src/index.ts",
   "repository": "https://github.com/zakariaharti/react-hookedup.git",
   "author": "zakaria harti <zakariya.harti@gmail.com> (https://github.com/zakariaharti)",
